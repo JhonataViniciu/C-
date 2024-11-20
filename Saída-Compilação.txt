@@ -1,0 +1,5 @@
+﻿A construção começou em 20:56...
+1>------ Compilação iniciada: Projeto: PrimeiroProjeto, Configuração: Debug Any CPU ------
+1>  PrimeiroProjeto -> C:\projetos\PrimeiroProjeto\PrimeiroProjeto\bin\Debug\PrimeiroProjeto.exe
+========== Compilação: 1 bem-sucedida, 0 com falha, 0 atualizada, 0 ignorada ==========
+========== Compilação concluído às 20:56 e levou 00,210 segundos ==========
