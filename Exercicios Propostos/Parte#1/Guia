@@ -1,0 +1,12 @@
+Exe1 - Obj: Ler dois valores inteiros, somar e mostrar o resultado.                         
+
+Exe2 - Obj: Ler o valor de um raio de um circulo, calcular a area, e mostrar o resultado com 4 casas decimais.    
+
+Exe3 - obj: Ler quatro valores inteiros(A B C D), somar, e mostrar a diferenca entre os valores (A+B)(C+D).   
+
+Exe4 - obj: Ler o codigo do funcionario, o quanto recebe por hora trabalhada e o quanto de horas ele fez. 
+    Em seguida, fazer o calculo de quanto devera receber e mostrar seu codigo e seu salario.                                        
+
+Exe5 - obj: Para a primeira comparação o programa devera ler o codigo de uma peça, a quantidade de peças que ira ser comprado,                    
+    e o valor unitario dessa peça. Em seguida devera ser feito o mesmo processo para uma segunda comparação.                        
+    Depois calcule o valor total da compra das duas comparações e mostre o resultado.
