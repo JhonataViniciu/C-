@@ -1,19 +1,46 @@
-﻿using System;
+﻿
+using System.Globalization;
 
-namespace Program17
+
+namespace Construtores
 {
-    internal class Calculadora
+    internal class Produtos
     {
-        public static double Pi = 3.14;
+        public string Nome;
+        public double Preco;
+        public int Quantidade;
 
-        public static double Circunferencia(double r)
+        public Produtos(string nome, double preco, int quantidade)
         {
-            return 2.0 * Pi * r;
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
         }
 
-        public static double Volume(double r)
+        public double ValorToatlEmEstoque()
         {
-            return 4.0 / 3.0 * Pi * Math.Pow(r, 3);
+            return Preco * Quantidade;
+        }
+
+        public void AdicionarProdutos(int quantidade)
+        {
+            Quantidade += quantidade;
+        }
+
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+
+        public override string ToString()
+        {
+            return Nome
+                + ", $ "
+                + Preco.ToString("F2", CultureInfo.InvariantCulture)
+                + ", "
+                + Quantidade
+                + " unidades, Total: $ "
+                + ValorToatlEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
