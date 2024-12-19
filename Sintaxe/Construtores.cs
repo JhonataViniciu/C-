@@ -10,9 +10,10 @@ namespace Construtores
 
             Produtos p = new Produtos("Tv", 500.00);
 
-            p.SetNome("Tv 4k");
+            p.Nome = "T";
 
-            Console.WriteLine(p.GetNome());
+            Console.WriteLine(p.Nome);
+            Console.WriteLine(p.Preco);
         }
     }
 }
