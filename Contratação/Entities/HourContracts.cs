@@ -13,6 +13,10 @@ namespace Program.cs.Entities
         public double ValuePerHour { get; set; }
         public int Hour { get; set; }
 
+
+        public HourContracts() {
+        }
+        
         public HourContracts(DateTime date, double valuePerHour, int hours)
         {
             Date = date;
