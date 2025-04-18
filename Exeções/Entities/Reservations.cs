@@ -27,10 +27,21 @@ namespace Try_catch.Entities
             return (int)duration.TotalDays;
         }
 
-        public void UpdateDates(DateTime chackIn, DateTime chackOut)
+        public String UpdateDates(DateTime checkIn, DateTime checkOut)
         {
-            CheckIn = chackIn;
-            CheckOut = chackOut;
+            DateTime now = DateTime.Now;
+            if (checkIn <= now || checkOut < now)
+            {
+                return "Reservations dates for update must be future dates";
+            }
+            if (checkOut <= checkIn)
+            {
+                return "Check-out date must be after check-in date";
+            }
+
+            CheckIn = checkIn;
+            CheckOut = checkOut;
+            return null;
         }
 
         public override string ToString()
