@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Try_catch.Entities;
 
 namespace Try_catch.Entities
 {
@@ -16,6 +13,11 @@ namespace Try_catch.Entities
 
         public Reservations(int roomNumber, DateTime checkIn, DateTime checkOut)
         {
+            if (checkOut <= checkIn)
+            {                           //Tratamento de exceções personalizado
+                throw new DomainException("Check-out date must be after check-in date");
+            }
+
             RoomNumber = roomNumber;
             CheckIn = checkIn;
             CheckOut = checkOut;
@@ -27,21 +29,20 @@ namespace Try_catch.Entities
             return (int)duration.TotalDays;
         }
 
-        public String UpdateDates(DateTime checkIn, DateTime checkOut)
+        public void UpdateDates(DateTime checkIn, DateTime checkOut)
         {
             DateTime now = DateTime.Now;
             if (checkIn <= now || checkOut < now)
-            {
-                return "Reservations dates for update must be future dates";
+            {               //Tratamento de exceções personalizado
+                throw new DomainException( "Reservations dates for update must be future dates");
             }
             if (checkOut <= checkIn)
             {
-                return "Check-out date must be after check-in date";
+                throw new DomainException( "Check-out date must be after check-in date");
             }
 
             CheckIn = checkIn;
             CheckOut = checkOut;
-            return null;
         }
 
         public override string ToString()
