@@ -17,7 +17,8 @@ namespace Interfaces.Entities
             get { return BasicPayment + Tax; }
         }
 
-        public override string ToString() {
+        public override string ToString()
+        {
             return "Basic payment: "
                     + BasicPayment.ToString("F2", CultureInfo.InvariantCulture)
                     + "\nTax: "
