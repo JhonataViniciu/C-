@@ -14,7 +14,7 @@ namespace Interfaces
         static void Main(string[] args)
         {
             Console.WriteLine("Enter rental data: ");
-            Console.Write("Car Model");
+            Console.Write("Car Model:");
             string model = Console.ReadLine();
             Console.Write("Pickup (dd/MM/yyyy hh:mm): ");
             DateTime start = DateTime.ParseExact(Console.ReadLine(), "dd/MM/yyyy HH:mm",CultureInfo.InvariantCulture);
@@ -28,7 +28,7 @@ namespace Interfaces
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-            RentalService rentalService = new RentalService(hour, day);
+            RentalService rentalService = new RentalService(hour, day, new BrazilTaxService());
             rentalService.ProcessInvoice(carRental);
 
             Console.Write("INVOICE: ");
