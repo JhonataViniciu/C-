@@ -4,7 +4,7 @@ using Delegates.Services;
 namespace Delegates
 {
 
-    delegate double BinaryNumericOperation(double n1, double n2);  //criando um tipo referencial
+    delegate void BinaryNumericOperation(double n1, double n2);  //criando um tipo referencial
 
     internal class Program
     {
@@ -13,10 +13,10 @@ namespace Delegates
             double a = 10;
             double b = 12;
 
-            BinaryNumericOperation op = CalculationService.Sum;  //introduzindo a referencia
+            BinaryNumericOperation op = CalculationService.ShowSum;  //introduzindo a referencia
+            op += CalculationService.ShowMax;  //Introducao de mais uma referencia
 
-            double resul = op.Invoke(a, b);
-            Console.WriteLine(resul);
+            op(a, b);
         }
     }
 }
