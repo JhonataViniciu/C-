@@ -5,18 +5,16 @@ namespace Delegates.Services
 {
     internal class CalculationService
     {
-        public static double Max(double x, double y)   //Retonar o maior deles
+        public static void ShowMax(double x, double y)
         {
-            return (x > y) ? x : y;
-        }
-        public static double Sum(double x, double y)   //Retorna a soma deles
-        {
-            return x + y;
+            double max = (x > y) ? x : y;
+            Console.WriteLine(max);
         }
 
-        public static double Square(double x)          //Retorna o Quadrado dele
+        public static void ShowSum(double x, double y)
         {
-            return x * x;
+            double sum = x + y;
+            Console.WriteLine(sum);
         }
     }
 }
